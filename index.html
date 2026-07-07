@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Official Apology (Matcha Edition)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="leaves" aria-hidden="true"></div>
+
+    <main class="container">
+
+        <!-- Mat-chan: the apology mascot -->
+        <div class="mascot-wrap">
+            <svg id="mascot" class="mood-plead" viewBox="0 0 240 220" role="img" aria-label="A cute bowl of matcha with a face">
+                <!-- steam -->
+                <g class="steam">
+                    <path class="wisp w1" d="M95 62 C90 50, 100 44, 95 32 C92 24, 98 18, 96 10" fill="none"/>
+                    <path class="wisp w2" d="M120 58 C114 46, 126 40, 120 28 C116 20, 124 14, 121 4" fill="none"/>
+                    <path class="wisp w3" d="M145 62 C140 50, 150 44, 145 32 C142 24, 148 18, 146 10" fill="none"/>
+                </g>
+                <!-- whisk leaning on bowl -->
+                <g class="whisk">
+                    <rect x="196" y="70" width="8" height="52" rx="4" fill="#B98A5E"/>
+                    <path d="M188 116 q12 26 12 34 M196 118 q4 26 4 32 M204 116 q-4 28 -4 34 M210 114 q-10 28 -12 36" stroke="#D9B48A" stroke-width="4" fill="none" stroke-linecap="round"/>
+                </g>
+                <!-- matcha surface -->
+                <ellipse cx="120" cy="86" rx="78" ry="20" fill="#6E9B4E"/>
+                <ellipse cx="120" cy="83" rx="70" ry="16" fill="#84B25F"/>
+                <!-- bowl -->
+                <path d="M42 88 C42 150 74 182 120 182 C166 182 198 150 198 88 Z" fill="#F3EBD8"/>
+                <path d="M42 88 C42 150 74 182 120 182 C166 182 198 150 198 88 L198 96 C198 152 166 176 120 176 C74 176 42 152 42 96 Z" fill="#E4D7BC" opacity="0.7"/>
+                <rect x="96" y="180" width="48" height="12" rx="6" fill="#E4D7BC"/>
+                <!-- blush -->
+                <g class="blush">
+                    <ellipse cx="78" cy="132" rx="11" ry="6" fill="#F2AEB4" opacity="0.8"/>
+                    <ellipse cx="162" cy="132" rx="11" ry="6" fill="#F2AEB4" opacity="0.8"/>
+                </g>
+
+                <!-- FACES (toggled by mood class on the svg) -->
+                <g id="face-plead">
+                    <circle cx="94" cy="120" r="10" fill="#3A4A2E"/>
+                    <circle cx="97" cy="116" r="3.5" fill="#fff"/>
+                    <circle cx="91" cy="123" r="1.8" fill="#fff"/>
+                    <circle cx="146" cy="120" r="10" fill="#3A4A2E"/>
+                    <circle cx="149" cy="116" r="3.5" fill="#fff"/>
+                    <circle cx="143" cy="123" r="1.8" fill="#fff"/>
+                    <path d="M110 146 q10 6 20 0" stroke="#3A4A2E" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    <path d="M82 104 q10 -8 20 -2 M138 102 q10 -6 20 2" stroke="#3A4A2E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                </g>
+                <g id="face-happy">
+                    <path d="M86 118 q8 -10 16 0 M138 118 q8 -10 16 0" stroke="#3A4A2E" stroke-width="5" fill="none" stroke-linecap="round"/>
+                    <path d="M106 140 q14 12 28 0" stroke="#3A4A2E" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                </g>
+                <g id="face-excited">
+                    <path d="M94 110 l3.5 7.5 8 1 -6 5.5 1.5 8 -7 -4 -7 4 1.5 -8 -6 -5.5 8 -1 Z" fill="#3A4A2E"/>
+                    <path d="M146 110 l3.5 7.5 8 1 -6 5.5 1.5 8 -7 -4 -7 4 1.5 -8 -6 -5.5 8 -1 Z" fill="#3A4A2E"/>
+                    <path d="M104 140 q16 16 32 0 q-16 8 -32 0" fill="#3A4A2E"/>
+                </g>
+                <g id="face-question">
+                    <circle cx="94" cy="120" r="7" fill="#3A4A2E"/>
+                    <circle cx="146" cy="118" r="9" fill="#3A4A2E"/>
+                    <path d="M84 106 l20 -4 M136 100 q10 -4 20 2" stroke="#3A4A2E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                    <path d="M108 146 q12 -4 24 2" stroke="#3A4A2E" stroke-width="4" fill="none" stroke-linecap="round"/>
+                </g>
+                <g id="face-angry">
+                    <circle cx="94" cy="122" r="8" fill="#3A4A2E"/>
+                    <circle cx="146" cy="122" r="8" fill="#3A4A2E"/>
+                    <path d="M82 104 l24 8 M158 104 l-24 8" stroke="#3A4A2E" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                    <path d="M108 150 q12 -8 24 0" stroke="#3A4A2E" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                </g>
+                <g id="face-dead">
+                    <path d="M86 112 l16 16 M102 112 l-16 16 M138 112 l16 16 M154 112 l-16 16" stroke="#3A4A2E" stroke-width="5" stroke-linecap="round"/>
+                    <ellipse cx="120" cy="148" rx="9" ry="11" fill="#3A4A2E"/>
+                </g>
+                <g id="face-love">
+                    <path d="M94 112 c-5 -8 -18 -4 -16 5 c1.5 7 10 11 16 16 c6 -5 14.5 -9 16 -16 c2 -9 -11 -13 -16 -5 Z" fill="#DE7B87"/>
+                    <path d="M146 112 c-5 -8 -18 -4 -16 5 c1.5 7 10 11 16 16 c6 -5 14.5 -9 16 -16 c2 -9 -11 -13 -16 -5 Z" fill="#DE7B87"/>
+                    <path d="M104 142 q16 14 32 0" stroke="#3A4A2E" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                </g>
+            </svg>
+        </div>
+
+        <!-- STEP 1: the apology + crime receipt -->
+        <section id="step-1" class="step">
+            <p class="eyebrow">an official apology from neil</p>
+            <h1>I've got <em>matcha</em> to apologize for.</h1>
+            <p class="subtitle">I've bean thinking, and I'm tea-ribly sorry. Please review the charges below.</p>
+
+            <div class="receipt" aria-label="Neil's crime receipt">
+                <p class="receipt-title">☕ NEIL'S CRIME RECEIPT ☕</p>
+                <div class="receipt-line"><span>Ragebaiting in company time</span><span>x3</span></div>
+                <div class="receipt-line"><span>Unlimited dad jokes on our way to and from office</span><span>x∞</span></div>
+                <div class="receipt-line"><span>Being annoying on purpose</span><span>allegedly</span></div>
+                <div class="receipt-divider"></div>
+                <div class="receipt-line total"><span>TOTAL OWED</span><span>1 matcha + 1 sweet treat</span></div>
+                <p class="receipt-footer">*payable immediately, no refunds</p>
+            </div>
+
+            <p class="question-text">Will you whisk it all and forgive me?</p>
+            <div class="button-container" id="forgive-arena">
+                <button id="yes-btn" class="btn-primary">Yes, you menace 🍵</button>
+                <button id="no-btn" class="btn-secondary">No 😤</button>
+            </div>
+        </section>
+
+        <!-- STEP 2: annoyance-o-meter -->
+        <section id="step-2" class="step" style="display:none;">
+            <h2>Okay okay, how steamed are you exactly?</h2>
+            <p class="subtitle">Be honest. Mat-chan can take it. (Mat-chan cannot take it.)</p>
+            <select id="steam-select">
+                <option value="" disabled selected>Pick your steam level…</option>
+                <option value="zero">0% already forgiven, you goof</option>
+                <option value="mild">25% mildly steamed</option>
+                <option value="medium">50% matcha-rated annoyance</option>
+                <option value="high">75% very steamed</option>
+                <option value="desk">100% I'm switching desks</option>
+                <option value="hr">1000% reporting you to HR</option>
+            </select>
+            <button id="steam-next-btn" class="btn-primary">Next</button>
+        </section>
+
+        <!-- STEP 3: schedule the matcha run -->
+        <section id="step-3" class="step" style="display:none;">
+            <h2>Then it's settled, matcha run on me 🍵</h2>
+            <p class="subtitle">Pick a day. Rants are included free of charge.</p>
+
+            <label class="field-label" for="day-select">When are we going?</label>
+            <select id="day-select">
+                <option value="" disabled selected>Choose a day…</option>
+                <option value="During tomorrow's break">During tomorrow's break</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="never">Never 💀</option>
+            </select>
+
+            <button id="treat-next-btn" class="btn-primary">Lock it in</button>
+        </section>
+
+        <!-- STEP 4: the real letter -->
+        <section id="step-4" class="step" style="display:none;">
+            <div class="letter">
+                <h2 class="letter-title">🎉 Grudge officially de-brewed! 🎉</h2>
+                <p class="confirm-box"><strong>Matcha run:</strong> <span id="confirm-day"></span></p>
+
+                <!-- 👇 change "Bestie" to her name here -->
+                <p>Dear Bestie,</p>
+                <p>Okay, real talk now. No ragebait, promise.</p>
+                <p>I know I took the jokes too far and it stopped being funny for you. I'm sorry. Work has been stressful for both of us and I made it worse instead of better, and that's on me.</p>
+                <p>Honestly? You're the only person at work I actually look forward to seeing every day. Our matcha and sweet treat runs are the best part of my week. Not because of the matcha. Because I get to rant to you and just hang out.</p>
+                <p>I know I can be a lot sometimes, youngest child things, what can I say. But I'd never want to hurt you or make you sad. That's the last thing I want.</p>
+                <p>So I'll try to tone it down. Try. No guarantees lol.</p>
+                <p>You matter so <em>matcha</em> to me 💚</p>
+                <p class="regards">Love,<br>Neil</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="footer">
+        Brewed with 💚 by <a href="https://github.com/neiljaviya" target="_blank"><strong>Neil Javiya</strong></a>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Optional: uncomment + configure to get emailed her answers, same as your date app
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() { emailjs.init('YOUR_PUBLIC_KEY'); })();
+    </script>
+    -->
+</body>
+</html>
