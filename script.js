@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             to_email: 'neiljaviya4@gmail.com',
             availability: day
         };
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        emailjs.send('service_kglqx7k', 'template_fpy829l', templateParams)
             .then(res => console.log('SUCCESS!', res.status))
             .catch(err => console.log('FAILED...', err));
     }
